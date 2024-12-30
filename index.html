@@ -26,9 +26,6 @@
 
       for (const list of lists) {
         list.addEventListener("click", () => {
-          // document.querySelector(".active").classList.remove("active");
-          // list.classList.add("active");
-
           bgSlide.style.width = `${list.offsetWidth}px`;
           bgSlide.style.left = `${list.offsetLeft}px`;
         });
