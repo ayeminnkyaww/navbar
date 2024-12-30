@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <ul>
+        <li class="bg"></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      const bgSlide = document.querySelector(".bg");
+      const lists = document.querySelectorAll("li");
+
+      bgSlide.style.width = `${lists[1].offsetWidth}px`;
+      bgSlide.style.left = `${lists[1].offsetLeft}px`;
+
+      for (const list of lists) {
+        list.addEventListener("click", () => {
+          // document.querySelector(".active").classList.remove("active");
+          // list.classList.add("active");
+
+          bgSlide.style.width = `${list.offsetWidth}px`;
+          bgSlide.style.left = `${list.offsetLeft}px`;
+        });
+      }
+    </script>
+  </body>
+</html>
